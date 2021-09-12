@@ -14,19 +14,25 @@ const showProducts = (products) => {
   
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product">
+ 
+    div.innerHTML = `<div class="single-product ">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
       <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price.toFixed(2)}</h2>  
+      <p><b>Category:</b> ${product.category}</p>
+     
+      <p><b>Rating:</b> ${product.rating.rate}</p>
+      <p><b>Rating Count:</b> ${product.rating.count}</p>
+      <h2>Price: $ ${product.price.toFixed(2)}</h2> 
+       
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <button id="details-btn" onclick="details()" class="btn btn-danger">Details</button></div>
       `;
             // add above h2 tag .toFixed(2) to show 2 decimal point in price 
 
     document.getElementById("all-products").appendChild(div);
+    
   }
 };
 let count = 0;
