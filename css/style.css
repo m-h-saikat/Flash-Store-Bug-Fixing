@@ -15,6 +15,7 @@ body{
 .main > h1{
  
     font-size: 3.5em;
+    color:darkorange;
  
 }
 #input-field {
@@ -29,8 +30,8 @@ body{
   border: none;
  
 }
-#search-btn{
-  border-radius: 50px;
+#search-btn, .details-btn , .addToCart-btn{
+  border-radius: 50px !important;
 }
 
 #all-products {
@@ -59,6 +60,8 @@ body{
   box-shadow: 4px 4px 10px gray;
   border-radius: 10px;
   border: 2px solid rgb(4, 15, 114);
+  transform: scale(1.03);
+  transition:transform 1s;
 }
 .product-image {
   width: 150px;
@@ -74,6 +77,13 @@ body{
   position: fixed;
   border-radius: 35px;
   background-color: rgb(230, 208, 179);
+}
+
+
+.btn:hover {
+  transform: scale(1.1);
+ 
+
 }
 .cart-main {
   padding-right: 30px;
