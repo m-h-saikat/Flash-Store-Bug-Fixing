@@ -12,6 +12,12 @@ body{
 
 }
 
+
+#product-Details
+{
+  background-color: white;
+  border-radius:20px;
+}
 .main > h1{
  
     font-size: 3.5em;
@@ -27,6 +33,7 @@ body{
   border:2px solid green;
   padding-left: 40px;
   font-size:1.5em;
+  text-align: center;
 }
 #input-field:hover {
   outline: none;
