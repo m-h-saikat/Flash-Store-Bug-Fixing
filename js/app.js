@@ -11,7 +11,7 @@ const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;   // here fix images to image because in API its name is image
-  
+  console.log(product.description);
     const div = document.createElement("div");
     div.classList.add("product");
  
@@ -26,7 +26,7 @@ const showProducts = (products) => {
       <p><b>Rating Count:</b> ${product.rating.count}</p>
       <h2>Price: $ ${product.price.toFixed(2)}</h2> 
        
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success me-5">add to cart</button>
       <button id="details-btn" onclick="details()" class="btn btn-danger">Details</button></div>
       `;
             // add above h2 tag .toFixed(2) to show 2 decimal point in price 
