@@ -49,6 +49,7 @@ const productDetails = productDetails => {
 
 let count = 0;
 const addToCart = (id, price) => {
+  document.getElementById('product-Details').innerText='';
   count = count + 1;
   updatePrice("price", price);
  
